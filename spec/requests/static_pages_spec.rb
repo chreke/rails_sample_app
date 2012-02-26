@@ -5,7 +5,6 @@ describe "Static pages" do
 
   describe "Home page" do
     before { visit root_path }
-
     
     it { should have_selector('h1', text: 'Sample App') }
     it { should have_selector('title', :text => "Ruby on Rails Sample App") }
@@ -29,5 +28,10 @@ describe "Static pages" do
 
     it { should have_selector('h1', text: 'Contact') }
   end
-  
+
+  describe "Signup page" do
+    before { visit signup_path }
+
+    it { should have_selector('h1', text: 'Sign Up') }
+  end
 end
